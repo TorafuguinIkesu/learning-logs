@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Special SG Guitar</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@1,300&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="main">
+      <nav>
+        <div class="logo-area">
+          <img src="./images/SGlogo.png" class="logo" />
+          <h2>Special SG Guitar</h2>
+        </div>
+
+        <div class="nav-links">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Detail</a></li>
+            <li><a href="#">Shop</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="infomation">
+        <div class="overlay"></div>
+        <img src="./images/SG.png" class="mobile" />
+        <div id="circle">
+          <div class="feature one">
+            
+            <div>
+              <h1>Pickup</h1>
+              <p>Dual P90 pickups</p>
+            </div>
+          </div>
+          <div class="feature two">
+            
+            <div>
+              <h1>Neck</h1>
+              <p>Long scale neck</p>
+            </div>
+          </div>
+          <div class="feature three">
+            
+            <div>
+              <h1>Sound</h1>
+              <p>High-gain rock sound</p>
+            </div>
+          </div>
+          <div class="feature four">
+            
+            <div>
+              <h1>Shape</h1>
+              <p>Cool flame-like body</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="control">
+        <img src="./images/arrow.png" id="upBtn" />
+        <h3>Feature</h3>
+        <img src="./images/arrow.png" id="downBtn" />
+      </div>
+    </div>
+
+    <script>
+      var circle = document.getElementById("circle");
+      var upBtn = document.getElementById("upBtn");
+      var downBtn = document.getElementById("downBtn");
+
+      var rotateDegree = 0;
+
+      upBtn.onclick = function () {
+        rotateDegree -= 90;
+        circle.style.transform = "rotate(" + rotateDegree + "deg)";
+      };
+
+      downBtn.onclick = function () {
+        rotateDegree += 90;
+        circle.style.transform = "rotate(" + rotateDegree + "deg)";
+      };
+    </script>
+  </body>
+</html>
